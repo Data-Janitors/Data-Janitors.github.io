@@ -1,50 +1,82 @@
-# React + TypeScript + Vite
+# Data Janitors
+## https://data-janitors.github.io/
+<!--TODO: Add Data Janitors logo and relevant tech icons.-->
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div style="text-align: center;">
 
-Currently, two official plugins are available:
+  ![Static Badge](https://img.shields.io/badge/React-61DBFB?style=for-the-badge&logo=react&labelColor=black)
+  ![Static Badge](https://img.shields.io/badge/TypeScript-1D4ED8?style=for-the-badge&logo=typescript&labelColor=black)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</div>
 
-## Expanding the ESLint configuration
+## To get started with editing the website's contents, you can follow this steps: 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 1. Install Node.js 
 
-- Configure the top-level `parserOptions` property like this:
+If you don't have Node.js installed already, you can download and install the LTS version from [Node.js](https://nodejs.org) 
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+After installation, verify the installation by running:
+
+```bash
+node -v
+npm -v
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Clone the Repository 
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Clone this repository to your local machine by running the following command: 
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+  ```bash
+  git clone https://github.com/data-janitors/data-janitors.github.io/
+  ```
+
+### 3. Navigate to the Project Directory
+
+Once you have successfully cloned the repository to your local machine, move into the project directory by running the following command:
+
+  ```bash
+  cd data-janitors.github.io
+  ``` 
+
+### 4. Install Dependencies
+
+Once inside the project directory, run the following command to install all the required npm packages:
+
+  ```bash
+  npm install
+  ```
+
+### 5. Start the Development Server
+
+To run the website locally, run the following command: 
+
+  ```bash
+  npm run dev
+  ```
+This will start the website, and you can view it at http://localhost:5173.
+
+### 6. Build and Preview the Website
+
+To build the project, run:
+
+  ``` bash
+  npm run build
+  ```
+
+To preview the production build, run:
+
+  ```bash
+  npm run preview
+  ```
+
+### 7. Deploy changes 
+
+This project uses the `gh-pages` npm package for deploying to GitHub Pages.
+
+After making any changes to the website and ready to deploy the changes, run the following command.
+
+  ```bash
+  npm run deploy
+  ```
+
+  This will automatically build the project and push the production files to the gh-pages branch, which is used by GitHub Pages to host the website.
